@@ -1,7 +1,7 @@
 from pars import get_review
 import pandas as pd
-# from airflow import DAG
-# from airflow.operators.python_operator import PythonOperator
+from airflow import DAG
+from airflow.operators.python_operator import PythonOperator
 import datetime
 import sqlalchemy
 from airflow import DAG
