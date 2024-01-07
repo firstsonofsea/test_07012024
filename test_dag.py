@@ -42,10 +42,10 @@ def transform_data():
 def load_data(df):
     # загружаем данные по отзывам в clickhouse
     df = pd.read_csv('transform_data_test_dag.csv')
-    host = 'clickhouse+http://{0}:{1}@188.166.25.203:8123'
+    host = ''
     # лучше сохранить в переменных средах 
-    user_name = 'srv_airflow_3'
-    psw = 'j87x292Ykt3orqOSejvlOMSQCXz'
+    user_name = ''
+    psw = ''
     con = sqlalchemy.create_engine(host.format(user_name, psw))
     df.to_sql(name='public_reviews', con=con, schema='raw_data', if_exists='append', index=False)
 
